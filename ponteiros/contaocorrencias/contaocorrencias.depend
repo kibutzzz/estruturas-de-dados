@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1567122053 source:c:\users\leonardoramos\desktop\ponteiros\contaocorrencias\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
