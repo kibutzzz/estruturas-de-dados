@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1569541480 source:c:\users\leonardoramos\desktop\estrutura-de-dados\alocacao-dinamica\exercicio\exercicio-lista-5\main.c
+	<stdio.h>
+	<stdlib.h>
+
