@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1572563173 source:c:\users\leonardoramos\desktop\estrutura-de-dados\manipulacao-arquivos\aula11\exercicio1\exercicio1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
