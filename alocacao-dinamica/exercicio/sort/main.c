@@ -29,13 +29,31 @@ void bubbleSort(int vet[], int n) {
 
 int main()
 {
-    int vet[10] = {5,8,456,7,64, 45, 123,84,12,389};
 
-    printVet(vet, 10);
+    int n = 0;
+    int *pArr = NULL;
+    printf("digite o numero de numeros que deseja ordenar: ");
+    scanf("%d", &n);
 
-    bubbleSort(&vet, 10);
+    pArr = malloc(n * sizeof(int));
+    if(pArr == NULL) {
+        printf("Erro ao alocar a memoria");
+        return 1;
+    }
+    for(int i = 0; i < n; i ++) {
+        printf("\ndigite o %d numero: ", i + 1);
+        scanf("%d", &pArr[i]);
+    }
 
-    printVet(vet, 10);
+    system("CLS");
+
+    printf("Vetor informado:");
+    printVet(pArr, n);
+
+    bubbleSort(pArr, n);
+
+    printf("\n\nVetor ordenado: ");
+    printVet(pArr, n);
 
     return 0;
 }
