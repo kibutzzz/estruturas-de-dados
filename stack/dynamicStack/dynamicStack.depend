@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1573775006 source:c:\users\leonardoramos\desktop\estrutura-de-dados\stack\dynamicstack\main.c
+	<stdio.h>
+	<stdlib.h>
+
