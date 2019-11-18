@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
+
 #define MAX 10
 
 
@@ -31,6 +33,7 @@ int empilhar( RegistroVisita novoRegistro) {
 int desempilhar() {
     if(topo <= 0) {
         printf("\nPILHA VAZIA!\n");
+
         return -1;
     }
 
@@ -40,8 +43,15 @@ int desempilhar() {
 
 void mostrarPilha() {
     for(int i = 0; i < topo; i++) {
-        printf("\n%d", i);
+        printf("\n#%d \n\nNome: %s\nRG: %s\nHora de entrada: %s",
+               i + 1, registros[i].nome, registros[i].rg, registros[i].hora
+               );
     }
+    printf("\n\n");
+}
+
+void esvaziarPilha() {
+    topo = 0;
 }
 
 int main()
@@ -60,6 +70,8 @@ int main()
         printf("\n\nDigite a sua opcao: ");
         scanf("%d", &opcao);
 
+        fflush(stdin);
+
         system("CLS");
 
         if(opcao == 1) {
@@ -76,19 +88,18 @@ int main()
 
             time_t rawtime;
             time (&rawtime);
-            novoRegistro.hora = ctime (&rawtime);
+            strcpy(novoRegistro.hora, ctime(&rawtime));
 
 
             empilhar(novoRegistro);
 
-        }
-
-        if(opcao == 2) {
-            //mostrar
-        }
-
-        if(opcao == 3) {
+        } else if(opcao == 2) {
+            mostrarPilha();
+        } else if(opcao == 3) {
             //imprimir
+            salvarPilha();
+        } else{
+            printf("Opcao %d Invalida", opcao);
         }
 
     } while(opcao != 0);
