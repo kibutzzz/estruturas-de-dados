@@ -85,7 +85,7 @@ int main()
         printf("\nOpcoes: \n");
         printf("\n1) Cadastrar novo visitante");
         printf("\n2) Mostrar visitantes");
-        printf("\n3) Imprimir relatório no arquivo");
+        printf("\n3) Imprimir relatorio no arquivo");
 
         printf("\n0) sair");
 
@@ -134,6 +134,7 @@ int main()
     }
     while(opcao != 0);
 
-    printf("\n");
+    system("CLS");
+
     return 0;
 }
