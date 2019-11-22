@@ -69,6 +69,7 @@ int salvarPilha()
 
         fputs(dadosRegistro, ponteiroArquivo);
     }
+    fclose(ponteiroArquivo);
     return 0;
 
 }
